@@ -15,7 +15,5 @@
 
 // Import commands.js using ES2015 syntax:
 
-import './Home_Page_commands'
-import './Register_Page_Commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

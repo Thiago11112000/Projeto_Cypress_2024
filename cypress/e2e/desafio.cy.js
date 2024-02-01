@@ -4,11 +4,21 @@
 import { faker } from '@faker-js/faker';
 import home_page from '../support/pages/home_page';
 import register_page from '../support/pages/register_page';
+import resolutions_page from '../support/resolutions/resolutions_page'
 const user_data = require ("../fixtures/desafio.json")
+const resolutions = require('../support/resolutions/resolutions.json');
+
+
+resolutions.screen.forEach(element => {
+  
+
 describe('Cadastro de Usuario',  ()=>{
 
 beforeEach('Acessando pagina de cadastro', () =>{
+ 
+  resolutions_page.setResolution(element)
  home_page.acessRegisterPage()
+
 })
   const user_name = 'Thiago'
   const user_email = 'thiagoclick2000@hotmail.com'
@@ -74,4 +84,4 @@ beforeEach('Acessando pagina de cadastro', () =>{
 
   })
 })
-     
+});
