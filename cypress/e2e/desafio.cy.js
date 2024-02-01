@@ -69,12 +69,8 @@ cy.acessRegisterPage()
    cy.fillEmail(email)
    cy.fillPassword(user_data.password)
    cy.saveRegister()
-  
-   cy.get('#swal2-title')
-    .should('have.text','Cadastro realizado!')
-   
-   cy.get('#swal2-html-container')
-    .should('have.text',`Bem-vindo ${name}`)
+   cy.checkRegisterSuccess(name)
+
   })
 })
      

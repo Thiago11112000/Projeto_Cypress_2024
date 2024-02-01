@@ -21,9 +21,14 @@ Cypress.Commands.add('fillPassword', (password) =>{
 })
 
 
-Cypress.Commands.add('checkMessage', (message) =>{
-  
+Cypress.Commands.add('checkMessage', (message) =>{ 
     cy.get('.errorLabel')
-    .should('have.text', message)
-     
+    .should('have.text', message)    
+})
+Cypress.Commands.add('checkRegisterSuccess', (name) =>{ 
+    cy.get('#swal2-title')
+    .should('have.text','Cadastro realizado!')
+   
+   cy.get('#swal2-html-container')
+    .should('have.text',`Bem-vindo ${name}`)
 })
